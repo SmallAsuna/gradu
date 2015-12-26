@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTML模板</title>
+<style type="text/css">
+
+body{background-image:url(6ff27a3327da08512a652b259bb4d5d9.jpg);}
+
+header{height: 50px;width: 1080px;background-color: rgba(55,55,55,0.8);margin: auto;}
+
+
+aside{position: relative;width: 150px;height:400px;float:left;}/*侧边栏*/
+
+div#body{width: 1080px;margin: auto;}/*主体范围*/
+
+
+ul{margin:0;padding:0;}
+
+
+li.navigation{float:left;height:50px;width: 100px;display: inline-block;position: relative;
+	        font-size: 20px;text-align: center;color: white;line-height: 50px;}/*导航菜单*/
+
+li.broadside{width: 100%;height:60px;background-color: rgba(55,55,55,0.8);position: relative;display: block;
+	          color:green;text-align: center;line-height: 60px}/*侧边栏样式*/
+
+a{display: inline-block;height: 100%;width: 100%;color: white;}
+
+a:hover{background-color: rgba(0,255,0,0.5);color: white;}
+
+
+article{width: 928px;display: inline-block;background-color: rgba(251,134,0,0.7);}
+
+li.content{position: relative;height: 80px;background-color: rgba(127,127,127,0.1);color:black;
+
+		  list-style-type:none;margin: 5px 35px;padding: 5px 50px;}
+
+
+#txt{text-align: center;}
+
+</style>
+</head>
+
+
+<!-- body部分-->
+<body>
+	<br>
+	<br>
+	<br>
+	<div id="body">
+	<header>
+		
+
+		<ul>
+		<li class="navigation" style="width:150px">实验室管理系统</li>
+		<li class="navigation" style="background-color:green"><a href="">仪器百科</a></li>
+		<li class="navigation"><a href="">财务管理</a></li>
+		<li class="navigation"><a href="">我的团队</a></li>
+		<li class="navigation"><a href="">扩展功能</a></li>
+		<li class="navigation"><a href="">设置</a></li>
+		</ul>
+
+
+		<!--<div class="navigation">仪器百科</div>
+		<div class="navigation">财务管理</div>
+		<div class="navigation">我的团队</div>
+		<div class="navigation">扩展功能</div>
+		<div class="navigation">设置</div>
+		<form class="navigation">
+		<input type="text" value="搜索">
+		</form>-->
+
+
+
+	</header>
+
+
+
+	<aside>
+
+		<ul>
+			<li class="broadside"style="background-color:green"><a href="">仪表类</a></li>	
+			<li class="broadside"><a href="">工具类</a></li>
+			<li class="broadside"><a href="">大型材料类</a></li>	
+			<li class="broadside"><a href="">导线接口类</a></li>
+			<li class="broadside"><a href="">芯片元件类</a></li>	
+			<li class="broadside"><a href="">其它</a></li>	
+			<li class="broadside"><a href="">添加器件</a></li>	
+
+		</ul>
+
+	</aside>
+
+	<article>
+		<ul>
+			<li class="content">优利德数字示波器100M <br>采样率：1GHZ 通道数量：双通道<br>编号：UTD2102CEX<br>设备状态：正常
+
+					  <form>
+ 			
+   				 <input type="button" value="隐藏" onclick="hide()">
+    			<input type="button" value="显示仪器详细参数" onclick="display()">
+    			<input type="button" value="申请使用" onclick="cancle()">
+  				</form>
+ 				</li>
+  					<div id="txt" style="display:none">
+  						 <img src="TB2hSGmc.jpg">
+       						<p><a href="http://dingyangkeji.testmart.cn/productDetail/id/3521168">点击打开官方网站</a></p>
+
+  					</div>
+  					<div id="txt2" style="display:none">
+       						<p>
+       							<form action="" method="post">
+								<fieldset>
+								<label>姓名:</label>
+								<input type="test" name="file"><br><br>
+
+								<label>研究所:</label>
+									  <select>
+								      <option value="大专">图像所</option>
+								      <option value="本科">电磁所</option>
+								  	  </select>
+								  	  <br><br>
+
+								<label>使用时长:</label>
+								    <input type="radio" value="1"  name="gender" />
+								    <label>一个月</label>
+								    <input type="radio" value="2"  name="gender" />
+								    <label>三个月</label>
+								    <br><br>
+
+								<label>使用地点:</label>
+									<input type="checkbox" value="11"  name="hobby" />
+								    <label>506研究室</label>
+								    <input type="checkbox" value="12"  name="hobby" />
+								    <label>508研究室</label>
+								    <input type="checkbox" value="13"  name="hobby" />
+								    <label>寝室</label>
+								    <input type="checkbox" value="14"  name="hobby" />
+								    <label>教室</label>
+								    <br><br>
+
+								<label>使用目的:</label>
+								<textarea name="qianming" row="40" cols="30">
+								</textarea>
+								 <br><br>
+
+
+								<button type="submit">提交申请</button>
+								</fieldset>
+								</form>
+
+       						</p>
+  					</div>
+  					 <script type="text/javascript">
+							  function hide()
+							{
+							 var hide=document.getElementById("txt");
+							    hide.style.display="none";
+							    var hide=document.getElementById("txt2");
+							    hide.style.display="none";    
+							}
+							function display()
+							{
+							    
+							    var hide=document.getElementById("txt");
+							    hide.style.backgroundColor="black";
+							    hide.style.display="block";
+							    hide.style.color="yellow";
+							    
+							 }	
+							 function cancle()
+							{
+
+							    var hide=document.getElementById("txt2");
+							    hide.style.backgroundColor="white";
+							    hide.style.display="block";							    
+							 }		
+  					 </script>
+
+			
+			<li class="content">XXX牌频谱仪</li>
+			<li class="content">XXX牌函数信号发生器</li>
+			<li class="content">XXX牌电源</li>
+			<li class="content">XXX牌万用表</li>
+		
+		</ul>
+	</article>
+
+</div>
+</body>
+</html>
