@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>µÇÂ¼Ò³Ãæ - BootstrapºóÌ¨¹ÜÀíÏµÍ³Ä£°æAceÏÂÔØ</title>
-		<meta name="keywords" content="BootstrapÄ£°æ,BootstrapÄ£°æÏÂÔØ,Bootstrap½Ì³Ì,BootstrapÖÐÎÄ" />
-		<meta name="description" content="Õ¾³¤ËØ²ÄÌá¹©BootstrapÄ£°æ,Bootstrap½Ì³Ì,BootstrapÖÐÎÄ·­ÒëµÈÏà¹ØBootstrap²å¼þÏÂÔØ" />
+		<title>登录页面</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -49,7 +49,7 @@
 						<div class="login-container">
 							<div class="center">
 								<h1>
-									<i class="icon-leaf green"></i>
+									<!--<i class="icon-leaf green"></i>-->
 									<span class="red">Ace</span>
 									<span class="white">Application</span>
 								</h1>
@@ -64,7 +64,7 @@
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												Please Enter Your Information
+												请输入验证信息
 											</h4>
 
 											<div class="space-6"></div>
@@ -73,14 +73,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															用户名:<input type="text" class="form-control" placeholder="Username" name="usern" />
+															<input type="text" class="form-control" placeholder="用户名" name="usern" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															密码：<input type="password" class="form-control" placeholder="Password" 
+															<input type="password" class="form-control" placeholder="密码" 
 															name="passw"/>
 															<i class="icon-lock"></i>
 														</span>
@@ -91,12 +91,12 @@
 													<div class="clearfix">
 														<label class="inline">
 															<input type="checkbox" class="ace" />
-															<span class="lbl"> Remember Me</span>
+															<span class="lbl">记住密码</span>
 														</label>
 
 														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="icon-key"></i>
-															Login
+															登录
 														</button>
 													</div>
 
@@ -104,10 +104,12 @@
 												</fieldset>
 											</form>
 
+											<!--
 											<div class="social-or-login center">
-												<span class="bigger-110">Or Login Using</span>
+											<span class="bigger-110">Or Login Using</span>
 											</div>
-
+											-->
+											<!--
 											<div class="social-login center">
 												<a class="btn btn-primary">
 													<i class="icon-facebook"></i>
@@ -121,19 +123,20 @@
 													<i class="icon-google-plus"></i>
 												</a>
 											</div>
+										-->
 										</div><!-- /widget-main -->
 
 										<div class="toolbar clearfix">
 											<div>
 												<a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
 													<i class="icon-arrow-left"></i>
-													I forgot my password
+													忘记密码
 												</a>
 											</div>
 
 											<div>
 												<a href="#" onclick="show_box('signup-box'); return false;" class="user-signup-link">
-													I want to register
+													注册
 													<i class="icon-arrow-right"></i>
 												</a>
 											</div>
@@ -146,7 +149,7 @@
 										<div class="widget-main">
 											<h4 class="header red lighter bigger">
 												<i class="icon-key"></i>
-												Retrieve Password
+												找回密码
 											</h4>
 
 											<div class="space-6"></div>
@@ -166,7 +169,7 @@
 													<div class="clearfix">
 														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
 															<i class="icon-lightbulb"></i>
-															Send Me!
+															发送
 														</button>
 													</div>
 												</fieldset>
@@ -175,7 +178,7 @@
 
 										<div class="toolbar center">
 											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
-												Back to login
+												返回登录
 												<i class="icon-arrow-right"></i>
 											</a>
 										</div>
@@ -236,11 +239,11 @@
 													<div class="clearfix">
 														<button type="reset" class="width-30 pull-left btn btn-sm">
 															<i class="icon-refresh"></i>
-															Reset
+															重置
 														</button>
 
 														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															Register
+															注册
 															<i class="icon-arrow-right icon-on-right"></i>
 														</button>
 													</div>
@@ -251,7 +254,7 @@
 										<div class="toolbar center">
 											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
 												<i class="icon-arrow-left"></i>
-												Back to login
+												返回登录
 											</a>
 										</div>
 									</div><!-- /widget-body -->
@@ -267,7 +270,7 @@
 
 		<!--[if !IE]> -->
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
 
 		<!-- <![endif]-->
 
