@@ -73,14 +73,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="用户名" name="usern" />
+															<input type="text" class="form-control" placeholder="用户名" name="usern" value="text"/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" 
+															<input type="password" class="form-control" placeholder="密码" value="123456"
 															name="passw"/>
 															<i class="icon-lock"></i>
 														</span>
@@ -196,32 +196,32 @@
 											<div class="space-6"></div>
 											<p> Enter your details to begin: </p>
 
-											<form>
+											<form action='index.php?m=home&c=login&a=register' method='post'>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+															<input type="email" class="form-control" placeholder="Email" name="Email"/>
 															<i class="icon-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" placeholder="用户名" name="username"/>
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
-															<i class="icon-lock"></i>
+														<input type="password" class="form-control" placeholder="密码" name="password" />
+														<i class="icon-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+															<input type="password" class="form-control" placeholder="请再输入一次密码"name="repeate" />
 															<i class="icon-retweet"></i>
 														</span>
 													</label>
@@ -229,8 +229,8 @@
 													<label class="block">
 														<input type="checkbox" class="ace" />
 														<span class="lbl">
-															I accept the
-															<a href="#">User Agreement</a>
+															我同意
+															<a href="#">用户协议</a>
 														</span>
 													</label>
 
@@ -242,7 +242,7 @@
 															重置
 														</button>
 
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
+														<button type="submit" class="width-65 pull-right btn btn-sm btn-success">
 															注册
 															<i class="icon-arrow-right icon-on-right"></i>
 														</button>

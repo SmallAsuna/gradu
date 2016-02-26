@@ -9,14 +9,14 @@ class LoginController extends Controller {
 
 
     public function doLogin(){
-    	dump($_POST);
+    	//dump($_POST);
     	//echo $_POST["usern"];
     	$User = M("User");
     	$where['username']=$_POST["usern"];
     	$where['password']=$_POST["passw"];
     	$data = $User->field('username')->where($where)->find();
     	if($data){
-    			dump($data);
+    			//dump($data);
     			$_SESSION['username']=$_POST["usern"];
     			//echo $_SESSION["username"];
     			//unset($_SESSION['username']);
@@ -36,7 +36,24 @@ class LoginController extends Controller {
        }
 
 
+       public function register(){
+        dump($_POST);
+        $User=M("User");
+        $data['username'] = $_POST["username"];
+        if($User->where($data)->find()){echo "用户已经存在";}
 
+        else if($_POST["password"]!=$_POST["repeate"]){echo "两次输入密码不一致";}
+
+        
+        else{
+          $data['password'] = $_POST["password"];
+          $data['email'] = $_POST["Email"];
+          $data['type'] = "student";
+          $User->add($data);
+          echo "注册成功";
+        }
+
+       }
 
 
 }
