@@ -10,6 +10,7 @@ class IndexController extends Controller {
       //var_dump($mNameArr);
       //$name='您好啊1';
       //$this->assign('hello',$mNameArr[1]['name']);
-      $this->display();
+    	if(isset($_SESSION['username']) && $_SESSION['username']!=""){ $this->display();}
+        else{header('location:index.php?m=home&c=login');}
     }
 }

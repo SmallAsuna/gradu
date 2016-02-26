@@ -17,16 +17,25 @@ class LoginController extends Controller {
     	$data = $User->field('username')->where($where)->find();
     	if($data){
     			dump($data);
-    			//$_SESSION['username']=$_POST["usern"];
+    			$_SESSION['username']=$_POST["usern"];
     			//echo $_SESSION["username"];
-    			unset($_SESSION['username']);
+    			//unset($_SESSION['username']);
     			echo $_SESSION["username"];
+                header('location:index.php?');
     	}
     	else{
           echo "用户名或者密码错误";
        }
        //dump($data);
        }
+
+       public function doLogout()
+       {
+        unset($_SESSION['username']);
+        header('location:index.php?');
+       }
+
+
 
 
 

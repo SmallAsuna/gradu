@@ -300,7 +300,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="index.php?m=home&c=login&a=dologout">
 										<i class="icon-off"></i>
 										退出
 									</a>
