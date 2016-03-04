@@ -77,7 +77,7 @@
 								<li>
 									<a href="#">
 										<div class="clearfix">
-											<span class="pull-left">软件更新</span>
+											<span class="pull-left">项目一</span>
 											<span class="pull-right">65%</span>
 										</div>
 
@@ -90,7 +90,7 @@
 								<li>
 									<a href="#">
 										<div class="clearfix">
-											<span class="pull-left">硬件更新</span>
+											<span class="pull-left">项目二</span>
 											<span class="pull-right">35%</span>
 										</div>
 
@@ -103,7 +103,7 @@
 								<li>
 									<a href="#">
 										<div class="clearfix">
-											<span class="pull-left">单元测试</span>
+											<span class="pull-left">项目三</span>
 											<span class="pull-right">15%</span>
 										</div>
 
@@ -276,7 +276,7 @@
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎光临,</small>
-									Jason
+									<?php echo ($name); ?>
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -365,17 +365,11 @@
 							</a>
 						</li>
 
-						<li>
-							<a href="typography.html">
-								<i class="icon-text-width"></i>
-								<span class="menu-text"> 文字排版 </span>
-							</a>
-						</li>
 
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-desktop"></i>
-								<span class="menu-text"> UI 组件 </span>
+								<span class="menu-text"> 设备管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
@@ -384,14 +378,14 @@
 								<li>
 									<a href="elements.html">
 										<i class="icon-double-angle-right"></i>
-										组件
+										实验室设备
 									</a>
 								</li>
 
 								<li>
 									<a href="buttons.html">
 										<i class="icon-double-angle-right"></i>
-										按钮 &amp; 图表
+										我使用的设备
 									</a>
 								</li>
 
