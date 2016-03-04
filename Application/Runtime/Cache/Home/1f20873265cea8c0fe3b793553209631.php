@@ -502,7 +502,7 @@
 													</tr>
 												</thead>
 
-												<tbody id="display2">
+												<tbody class="displaytbody">
 													<tr class="displaytable">
 														<td class="center">
 															<label>
@@ -511,12 +511,10 @@
 															</label>
 														</td>
 
-														<td>
-															<a href="#"><?php echo ($machinenumber); ?></a>
-														</td>
-														<td><?php echo ($machinename); ?></td>
-														<td class="hidden-480"><?php echo ($machineown); ?></td>
-														<td><?php echo ($machinetime); ?></td>
+														<td class="one"><?php echo ($machinenumber); ?></td>
+														<td class="two"><?php echo ($machinename); ?></td>
+														<td class="three"><?php echo ($machineown); ?></td>
+														<td class="four"><?php echo ($machinetime); ?></td>
 
 														<td class="hidden-480">
 															<span class="label label-sm label-warning">Expiring</span>
@@ -575,9 +573,10 @@
 															</div>
 														</td>
 
-
+														
 
 													</tr>
+
 												</tbody>
 
 												
