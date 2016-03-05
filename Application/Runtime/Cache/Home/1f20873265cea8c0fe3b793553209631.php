@@ -502,8 +502,8 @@
 													</tr>
 												</thead>
 
-												<tbody class="displaytbody">
-													<tr class="displaytable">
+												<tbody id="displaytbody">
+													<tr id="displaytable">
 														<td class="center">
 															<label>
 																<input type="checkbox" class="ace">
@@ -511,10 +511,10 @@
 															</label>
 														</td>
 
-														<td class="one"><?php echo ($machinenumber); ?></td>
-														<td class="two"><?php echo ($machinename); ?></td>
-														<td class="three"><?php echo ($machineown); ?></td>
-														<td class="four"><?php echo ($machinetime); ?></td>
+														<td class="machineid">没有任何设备</td>
+														<td class="machinename">无</td>
+														<td class="machineown">无</td>
+														<td class="time">无</td>
 
 														<td class="hidden-480">
 															<span class="label label-sm label-warning">Expiring</span>
@@ -573,9 +573,18 @@
 															</div>
 														</td>
 
-														
-
 													</tr>
+
+
+													<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+													<script type="text/javascript">
+
+													for(var i=0;i<<?php echo ($twice); ?>;i++)
+													{
+													$("#displaytbody").append($("#displaytable").clone());
+												    }
+													</script>
+
 
 												</tbody>
 

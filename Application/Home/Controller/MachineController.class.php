@@ -4,26 +4,29 @@ use Think\Controller;
 use Think\Model;
 class MachineController extends Controller {
     public function index(){
-      $this->assign('machinenumber',"123");
-      $this->assign('machinename',"示波器");
-      $this->assign('machineown',"图像所");
-      $this->assign('machinetime',"2007");
-    	$this->display();
 
-      $a=0;
-  //    $this->assign('machinenumber',"1234");
-  //    $this->assign('machinename',"频谱仪");
-  //    $this->assign('machineown',"电磁所");
-  //    $this->assign('machinetime',"2007");
+    	
+
+    //  $a=0;
+
+       $Equipment = M("Equipment");
+       $data =$Equipment->select();
+       //dump($data);
+       $length = count($data)-1;
+       $this->assign('twice',$length);
+       $this->display();
 
 
-          echo '<script type="text/javascript">
-          $(".displaytbody").append($(".displaytable").clone());
-          $(".one:eq('.$a.')").replaceWith("<td>测试2</td>");
+        for($i=0;$i<3;$i++)
+        {
+
+        echo '<script type="text/javascript">
+          $(".machineid:eq(0)").replaceWith("<td>'.$data[$i]["serialnumber"].'</td>");
+          $(".machinename:eq(0)").replaceWith("<td>'.$data[$i]["name"].'</td>");
+          $(".machineown:eq(0)").replaceWith("<td>'.$data[$i]["owner"].'</td>");
+          $(".time:eq(0)").replaceWith("<td>'.$data[$i]["time"].'</td>");
           </script>';
-
-
-
+          }
 
     }
 
