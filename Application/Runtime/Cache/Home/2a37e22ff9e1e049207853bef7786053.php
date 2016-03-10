@@ -47,7 +47,11 @@
 				font-size: 15px;
 				line-height: 10px;
 		}
-		.radiocss{padding: 5px; }
+		.radiocss{padding: 5px;}
+		.radiocss:hover{background-color:rgba(0,255,0,0.5);
+						color: white;
+						width: 300px;
+						}
 
 		</style>
 	</head>
@@ -498,19 +502,59 @@
 								设备名字:<input type="text" name="name" />
 								</div>
 								<div class="formcss">
-								设备状态:<div class="radiocss"><input type="radio" name="status" value="free" />在实验室未被使用</div>
-										 <div class="radiocss"><input type="radio" name="status" value="use" />设备被使用或在运行</div>
-										<div class="radiocss"><input type="radio" name="status" value="bad" />设备损坏</div>
+								<div class="radiocss">设备状态:</div>
+											<div class="radiocss"><input type="radio" name="status" value="free" id="status1"/>
+
+											<label for="status1">在实验室未被使用</label>
+
+										</div>
+										 <div class="radiocss"><input type="radio" name="status" value="use" id="status2"/>
+
+
+										 <label for="status2">	设备被使用或在运行</label>
+
+										 </div>
+										<div class="radiocss"><input type="radio" name="status" value="bad" id="status3"/>
+
+										<label for="status3">	设备损坏</label>
+
+										</div>
 								
 								</div>
 								<div class="formcss">
-								设备新旧：
-								<div class="radiocss"><input type="radio" name="new" value="newbuy" />新买未使用</div>
-								<div class="radiocss"><input type="radio" name="new" value="halfyear" />使用半年以内</div>
-								<div class="radiocss"><input type="radio" name="new" value="oneyear" />使用半年到一年</div>
-								<div class="radiocss"><input type="radio" name="new" value="threeyear" />使用时长在一年以上</div>
-								<div class="radiocss"><input type="radio" name="new" value="overthreeyear" />使用时长在三年以上</div>
+								<div class="radiocss">设备新旧：</div>
+								<div class="radiocss"><input type="radio" name="new" value="newbuy"id="new1" />
+								<label for="new1">新买未使用</label>
 								</div>
+
+
+								<div class="radiocss"><input type="radio" name="new" value="halfyear"id="new2" />
+								<label for="new2">使用半年以内</label>
+								</div>
+
+								<div class="radiocss"><input type="radio" name="new" value="oneyear"id="new3" />
+									<label for="new3">
+									使用半年到一年
+									</label>
+								</div>
+
+
+
+								<div class="radiocss"><input type="radio" name="new" value="threeyear" id="new4"/>
+
+									<label for="new4">
+									使用时长在一年以上
+									</label>
+								</div>
+
+
+								<div class="radiocss">
+									
+									<input type="radio" name="new" value="overthreeyear" id="new5" />
+									<label for="new5">使用时长在三年以上</label>
+
+								</div>
+							</div>
 
 
 								<div class="formcss">
