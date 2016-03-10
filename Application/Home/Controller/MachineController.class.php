@@ -30,7 +30,19 @@ class MachineController extends Controller {
 
     }
 
+     public function insertshow(){
 
+        $this->display("insert");
+        
+    }
+
+
+    public function insert(){
+
+        dump($_POST);
+      
+
+    }
 
 
 }

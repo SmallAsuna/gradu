@@ -376,7 +376,7 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="elements.html">
+									<a href="index.php?m=home&c=machine">
 										<i class="icon-double-angle-right"></i>
 										实验室设备
 									</a>

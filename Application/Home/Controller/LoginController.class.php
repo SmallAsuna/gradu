@@ -37,7 +37,7 @@ class LoginController extends Controller {
 
 
        public function register(){
-        dump($_POST);
+        //dump($_POST);
         $User=M("User");
         $data['username'] = $_POST["username"];
         if($User->where($data)->find()){echo "用户已经存在";}
