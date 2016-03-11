@@ -17,7 +17,7 @@ class MachineController extends Controller {
        $this->display();
 
 
-        for($i=0;$i<3;$i++)
+        for($i=0;$i<count($data);$i++)
         {
 
         echo '<script type="text/javascript">
@@ -40,6 +40,14 @@ class MachineController extends Controller {
     public function insert(){
 
         dump($_POST);
+        $Equipment=M("Equipment");
+        $data['serialnumber']=$_POST["number"];
+        $data['name']=$_POST["name"];
+        $data['status']=$_POST["status"];
+        $data['new']=$_POST["new"];
+        $data['owner']=$_POST["owmer"];
+        
+        $Equipment->add($data);
       
 
     }
