@@ -359,7 +359,7 @@
 
 					<ul class="nav nav-list">
 						<li class="active">
-							<a href="index.html">
+							<a href="index.php?">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
 							</a>
@@ -383,7 +383,7 @@
 								</li>
 
 								<li>
-									<a href="buttons.html">
+									<a href="index.php?m=home&c=machine">
 										<i class="icon-double-angle-right"></i>
 										我使用的设备
 									</a>
@@ -392,14 +392,14 @@
 								<li>
 									<a href="treeview.html">
 										<i class="icon-double-angle-right"></i>
-										树菜单
+										资金使用详情
 									</a>
 								</li>
 
 								<li>
-									<a href="jquery-ui.html">
+									<a href="index.php?m=home&c=machine&a=insertshow">
 										<i class="icon-double-angle-right"></i>
-										jQuery UI
+										插入设备
 									</a>
 								</li>
 
@@ -410,48 +410,7 @@
 									</a>
 								</li>
 
-								<li>
-									<a href="#" class="dropdown-toggle">
-										<i class="icon-double-angle-right"></i>
 
-										三级菜单
-										<b class="arrow icon-angle-down"></b>
-									</a>
-
-									<ul class="submenu">
-										<li>
-											<a href="#">
-												<i class="icon-leaf"></i>
-												第一级
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="dropdown-toggle">
-												<i class="icon-pencil"></i>
-
-												第四级
-												<b class="arrow icon-angle-down"></b>
-											</a>
-
-											<ul class="submenu">
-												<li>
-													<a href="#">
-														<i class="icon-plus"></i>
-														添加产品
-													</a>
-												</li>
-
-												<li>
-													<a href="#">
-														<i class="icon-eye-open"></i>
-														查看商品
-													</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
 						</li>
 

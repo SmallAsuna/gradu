@@ -38,14 +38,13 @@ class MachineController extends Controller {
 
 
     public function insert(){
-
         dump($_POST);
         $Equipment=M("Equipment");
         $data['serialnumber']=$_POST["number"];
         $data['name']=$_POST["name"];
         $data['status']=$_POST["status"];
-        $data['new']=$_POST["new"];
-        $data['owner']=$_POST["owmer"];
+        $data['new']=$_POST["new1"];
+        $data['owner']=$_POST["owner"];
         
         $Equipment->add($data);
       

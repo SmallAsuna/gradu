@@ -371,7 +371,7 @@
 
 					<ul class="nav nav-list">
 						<li class="active">
-							<a href="index.html">
+							<a href="index.php">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
 							</a>
@@ -493,7 +493,11 @@
 						</div><!-- /.page-header -->
 
 						<div class="row">
-								<form action="index.php?m=home&c=machine&a=insert" method="post">
+
+								<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+
+
+								<form action="index.php?m=home&c=machine&a=insert" method="post" id="machine1">
 									
 								<div class="formcss">
 								设备编号:<input type="text" name="number" />
@@ -558,16 +562,37 @@
 
 
 								<div class="formcss">
-								设备所有者：<input type="text" name="owmer" />
+								设备所有者：<input type="text" name="owner" />
 								</div>
 										
 								<div class="formcss">
-								<input type="submit" style="height:60px;width:100px;background-color:rgba(127,127,127,0.5);border:0;" value="提交表单" />
+								<input type="button" 
+								style="height:40px;width:70px;background-color:rgba(127,127,127,0.7);border:0;" 
+								value="添加器件" onclick="symbitfrom()"/>
 								</div>
 
 							</form>
 
+								<script type="text/javascript">
 
+								function symbitfrom(){
+
+								$.post("index.php?m=home&c=machine&a=insert",{
+									number:$("[name='number']").val(),
+									name:$("[name='name']").val(),
+									status:$("[name='status']").val(),
+									new1:$("[name='new']").val(),
+									owner:$("[name='owner']").val(),}
+
+									);
+									
+								alert("插入成功");  
+								location.replace(location.href);   
+									
+								}
+
+
+								</script>
 
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
