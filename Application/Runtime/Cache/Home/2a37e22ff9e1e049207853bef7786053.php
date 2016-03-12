@@ -53,6 +53,7 @@
 						width: 300px;
 						}
 
+
 		</style>
 	</head>
 
@@ -369,22 +370,16 @@
 						</div>
 					</div><!-- #sidebar-shortcuts -->
 
-					<ul class="nav nav-list">
-						<li class="active">
-							<a href="index.html">
+			<ul class="nav nav-list">
+						<li>
+							<a href="index.php?">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
 							</a>
 						</li>
 
-					<!-- 	<li>
-							<a href="typography.html">
-								<i class="icon-text-width"></i>
-								<span class="menu-text"> 文字排版 </span>
-							</a>
-						</li> -->
 
-						<li>
+						<li  class="active">
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-desktop"></i>
 								<span class="menu-text"> 设备管理 </span>
@@ -392,32 +387,32 @@
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
-							<ul class="submenu">
+							<ul class="submenu" >
 								<li>
-									<a href="labmachine.html">
+									<a href="index.php?m=home&c=machine">
 										<i class="icon-double-angle-right"></i>
 										实验室设备
 									</a>
 								</li>
 
 								<li>
-									<a href="buttons.html">
+									<a href="index.php?m=home&c=machine">
 										<i class="icon-double-angle-right"></i>
-										我的设备管理
+										我使用的设备
 									</a>
 								</li>
 
 								<li>
 									<a href="treeview.html">
 										<i class="icon-double-angle-right"></i>
-										资金使用情况
+										资金使用详情
 									</a>
 								</li>
 
-								<li>
-									<a href="jquery-ui.html">
+								<li  class="active">
+									<a href="index.php?m=home&c=machine&a=insertshow">
 										<i class="icon-double-angle-right"></i>
-										jQuery UI
+										插入设备
 									</a>
 								</li>
 
@@ -428,16 +423,87 @@
 									</a>
 								</li>
 
+
 							</ul>
 						</li>
 
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 表格 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="tables.html">
+										<i class="icon-double-angle-right"></i>
+										简单 &amp; 动态
+									</a>
+								</li>
+
+								<li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										jqGrid plugin
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-edit"></i>
+								<span class="menu-text"> 表单 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="form-elements.html">
+										<i class="icon-double-angle-right"></i>
+										表单组件
+									</a>
+								</li>
+
+								<li>
+									<a href="form-wizard.html">
+										<i class="icon-double-angle-right"></i>
+										向导提示 &amp; 验证
+									</a>
+								</li>
+
+								<li>
+									<a href="wysiwyg.html">
+										<i class="icon-double-angle-right"></i>
+										编辑器
+									</a>
+								</li>
+
+								<li>
+									<a href="dropzone.html">
+										<i class="icon-double-angle-right"></i>
+										文件上传
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="widgets.html">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 插件 </span>
+							</a>
+						</li>
 
 						<li>
 							<a href="calendar.html">
 								<i class="icon-calendar"></i>
 
 								<span class="menu-text">
-									日程安排
+									日历
 									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
 										<i class="icon-warning-sign red bigger-130"></i>
 									</span>
@@ -445,8 +511,117 @@
 							</a>
 						</li>
 
+						<li>
+							<a href="gallery.html">
+								<i class="icon-picture"></i>
+								<span class="menu-text"> 相册 </span>
+							</a>
+						</li>
 
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-tag"></i>
+								<span class="menu-text"> 更多页面 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="profile.html">
+										<i class="icon-double-angle-right"></i>
+										用户信息
+									</a>
+								</li>
+
+								<li>
+									<a href="inbox.html">
+										<i class="icon-double-angle-right"></i>
+										收件箱
+									</a>
+								</li>
+
+								<li>
+									<a href="pricing.html">
+										<i class="icon-double-angle-right"></i>
+										售价单
+									</a>
+								</li>
+
+								<li>
+									<a href="invoice.html">
+										<i class="icon-double-angle-right"></i>
+										购物车
+									</a>
+								</li>
+
+								<li>
+									<a href="timeline.html">
+										<i class="icon-double-angle-right"></i>
+										时间轴
+									</a>
+								</li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-double-angle-right"></i>
+										登录 &amp; 注册
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-file-alt"></i>
+
+								<span class="menu-text">
+									其他页面
+									<span class="badge badge-primary ">5</span>
+								</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="faq.html">
+										<i class="icon-double-angle-right"></i>
+										帮助
+									</a>
+								</li>
+
+								<li>
+									<a href="error-404.html">
+										<i class="icon-double-angle-right"></i>
+										404错误页面
+									</a>
+								</li>
+
+								<li>
+									<a href="error-500.html">
+										<i class="icon-double-angle-right"></i>
+										500错误页面
+									</a>
+								</li>
+
+								<li>
+									<a href="grid.html">
+										<i class="icon-double-angle-right"></i>
+										网格
+									</a>
+								</li>
+
+								<li>
+									<a href="blank.html">
+										<i class="icon-double-angle-right"></i>
+										空白页面
+									</a>
+								</li>
+							</ul>
+						</li>
 					</ul><!-- /.nav-list -->
+
 
 					<div class="sidebar-collapse" id="sidebar-collapse">
 						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
@@ -500,13 +675,17 @@
 								<form action="index.php?m=home&c=machine&a=insert" method="post" id="machine1">
 									
 								<div class="formcss">
-								设备编号:<input type="text" name="number" />
+								设备的编号:<input type="text" name="number" />
 								</div>
 								<div class="formcss">
-								设备名字:<input type="text" name="name" />
+								设备的名字:<input type="text" name="name" />
 								</div>
 								<div class="formcss">
-								<div class="radiocss">设备状态:</div>
+								设备所有者:<input type="text" name="owner" />
+								</div>
+										
+								<div class="formcss">
+								设备状态:<br><br>
 											<div class="radiocss"><input type="radio" name="status" value="free" id="status1"/>
 
 											<label for="status1">在实验室未被使用</label>
@@ -526,7 +705,7 @@
 								
 								</div>
 								<div class="formcss">
-								<div class="radiocss">设备新旧：</div>
+								设备新旧：<br><br>
 								<div class="radiocss"><input type="radio" name="new" value="newbuy"id="new1" />
 								<label for="new1">新买未使用</label>
 								</div>
@@ -561,10 +740,7 @@
 							</div>
 
 
-								<div class="formcss">
-								设备所有者：<input type="text" name="owner" />
-								</div>
-										
+							
 								<div class="formcss">
 								<input type="button" 
 								style="height:40px;width:70px;background-color:rgba(127,127,127,0.7);border:0;" 
