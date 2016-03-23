@@ -664,7 +664,7 @@
 														<td class="machineown">无</td>
 														<td class="time">无</td>
 
-														<td class="hidden-480">
+														<td class="hidden-480 status">
 															<span class="label label-sm label-success">正常</span>
 														</td>
 													    <td class="price">价格1</td>
@@ -682,6 +682,7 @@
 													{
 													$("#displaytbody").append($("#displaytable").clone());
 												    }
+												    
 
 													</script>
 

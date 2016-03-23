@@ -23,9 +23,12 @@ class MachineController extends Controller {
           $(".machineown:eq(0)").replaceWith("<td>'.$data[$i]["owner"].'</td>");
           $(".time:eq(0)").replaceWith("<td>'.$data[$i]["time"].'</td>");
           $(".price:eq(0)").replaceWith("<td>'.$data[$i]["price"].'</td>");
+          $("span.label.label-sm:eq('.$i.')").replaceWith("<span class=\"label label-sm label-success\">'.$data[$i]["status"].'</span>");
           </script>';
+         }
 
-          }
+         $this->display("repleace");
+         
 
     }
 
@@ -34,6 +37,7 @@ class MachineController extends Controller {
         $this->display("insert");
         
     }
+
 
 
     public function insert(){

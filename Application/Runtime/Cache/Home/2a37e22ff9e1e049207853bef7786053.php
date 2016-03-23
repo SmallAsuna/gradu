@@ -689,38 +689,31 @@
 										
 								<div class="formcss">
 								状　态:<br><br>
-											<div class="radiocss"><input type="radio" name="status" value="新买未使用" id="status1"/>
+											<div class="radiocss"><input type="radio" name="status" value="全新从未使用" id="status1"/>
+											<label for="status1">全新未拆封设备</label>
+										    </div>
 
-											<label for="status1">新买未使用</label>
-
-										</div>
-										 <div class="radiocss"><input type="radio" name="status" value="设备正常" id="status2"/>
-
-
+										 <div class="radiocss"><input type="radio" name="status" value="正常" id="status2"/>
 										 <label for="status2">设备正常</label>
-
 										 </div>
-										<div class="radiocss"><input type="radio" name="status" value="设备被借用" id="status3"/>
 
-										<label for="status3">设备被借用</label>
-
+										<div class="radiocss"><input type="radio" name="status" value="正在使用" id="status3"/>
+										<label for="status3">设备在使用</label>
 										</div>
-										<div class="radiocss"><input type="radio" name="status" value="设备存在故障" id="status4"/>
 
+										<div class="radiocss"><input type="radio" name="status" value="存在故障" id="status4"/>
 										<label for="status4">设备存在故障</label>
-
 										</div>
-										<div class="radiocss"><input type="radio" name="status" value="设备损坏" id="status5"/>
 
+										<div class="radiocss"><input type="radio" name="status" value="彻底报废" id="status5"/>
 										<label for="status5">设备损坏</label>
-
 										</div>
 								
 								</div>
 							
 
 					
-
+ 								
 							
 								<div class="formcss">
 								<input type="button" 
@@ -737,18 +730,20 @@
 								$.post("index.php?m=home&c=machine&a=insert",{
 									number:$("[name='number']").val(),
 									name:$("[name='name']").val(),
-									status:$("[name='status']").val(),
+									status:$("[name='status']:checked").val(),
 									owner:$("[name='owner']").val(),
 									price:$("[name='price']").val()
 
-								}
+								});
 
-									);
+
 									
 								alert("插入成功");  
 								location.replace(location.href);   
 									
 								}
+
+
 
 
 								</script>
