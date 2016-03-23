@@ -675,70 +675,51 @@
 								<form action="index.php?m=home&c=machine&a=insert" method="post" id="machine1">
 									
 								<div class="formcss">
-								设备的编号:<input type="text" name="number" />
+								编　号:<input type="text" name="number" />
 								</div>
 								<div class="formcss">
-								设备的名字:<input type="text" name="name" />
+								名　字:<input type="text" name="name" />
 								</div>
 								<div class="formcss">
-								设备所有者:<input type="text" name="owner" />
+								所有者:<input type="text" name="owner" />
+								</div>
+								<div class="formcss">
+								价　格:<input type="text" name="price" />元
 								</div>
 										
 								<div class="formcss">
-								设备状态:<br><br>
-											<div class="radiocss"><input type="radio" name="status" value="free" id="status1"/>
+								状　态:<br><br>
+											<div class="radiocss"><input type="radio" name="status" value="新买未使用" id="status1"/>
 
-											<label for="status1">在实验室未被使用</label>
+											<label for="status1">新买未使用</label>
 
 										</div>
-										 <div class="radiocss"><input type="radio" name="status" value="use" id="status2"/>
+										 <div class="radiocss"><input type="radio" name="status" value="设备正常" id="status2"/>
 
 
-										 <label for="status2">	设备被使用或在运行</label>
+										 <label for="status2">设备正常</label>
 
 										 </div>
-										<div class="radiocss"><input type="radio" name="status" value="bad" id="status3"/>
+										<div class="radiocss"><input type="radio" name="status" value="设备被借用" id="status3"/>
 
-										<label for="status3">	设备损坏</label>
+										<label for="status3">设备被借用</label>
+
+										</div>
+										<div class="radiocss"><input type="radio" name="status" value="设备存在故障" id="status4"/>
+
+										<label for="status4">设备存在故障</label>
+
+										</div>
+										<div class="radiocss"><input type="radio" name="status" value="设备损坏" id="status5"/>
+
+										<label for="status5">设备损坏</label>
 
 										</div>
 								
 								</div>
-								<div class="formcss">
-								设备新旧：<br><br>
-								<div class="radiocss"><input type="radio" name="new" value="newbuy"id="new1" />
-								<label for="new1">新买未使用</label>
-								</div>
+							
 
-
-								<div class="radiocss"><input type="radio" name="new" value="halfyear"id="new2" />
-								<label for="new2">使用半年以内</label>
-								</div>
-
-								<div class="radiocss"><input type="radio" name="new" value="oneyear"id="new3" />
-									<label for="new3">
-									使用半年到一年
-									</label>
-								</div>
-
-
-
-								<div class="radiocss"><input type="radio" name="new" value="threeyear" id="new4"/>
-
-									<label for="new4">
-									使用时长在一年以上
-									</label>
-								</div>
-
-
-								<div class="radiocss">
-									
-									<input type="radio" name="new" value="overthreeyear" id="new5" />
-									<label for="new5">使用时长在三年以上</label>
-
-								</div>
-							</div>
-
+					
 
 							
 								<div class="formcss">
@@ -757,8 +738,10 @@
 									number:$("[name='number']").val(),
 									name:$("[name='name']").val(),
 									status:$("[name='status']").val(),
-									new1:$("[name='new']").val(),
-									owner:$("[name='owner']").val(),}
+									owner:$("[name='owner']").val(),
+									price:$("[name='price']").val()
+
+								}
 
 									);
 									

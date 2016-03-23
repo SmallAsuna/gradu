@@ -642,10 +642,11 @@
 														<th>设备名</th>
 														<th>所有者</th>
 
-														<th>购买时间</th>
-														<th class="hidden-480">设备状态/健康</th>
-
+														<th>录入时间</th>
+														<th>设备状态/健康</th>
+														<th>价格</th>
 														<th>操作</th>
+
 													</tr>
 												</thead>
 
@@ -664,60 +665,11 @@
 														<td class="time">无</td>
 
 														<td class="hidden-480">
-															<span class="label label-sm label-warning">Expiring</span>
+															<span class="label label-sm label-success">正常</span>
 														</td>
-													    <td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-																<button class="btn btn-xs btn-success">
-																	<i class="icon-ok bigger-120"></i>
-																</button>
-
-																<button class="btn btn-xs btn-info">
-																	<i class="icon-edit bigger-120"></i>
-																</button>
-
-																<button class="btn btn-xs btn-danger">
-																	<i class="icon-trash bigger-120"></i>
-																</button>
-
-																<button class="btn btn-xs btn-warning">
-																	<i class="icon-flag bigger-120"></i>
-																</button>
-															</div>
-
-															<div class="visible-xs visible-sm hidden-md hidden-lg">
-																<div class="inline position-relative">
-																	<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
-																		<i class="icon-cog icon-only bigger-110"></i>
-																	</button>
-
-																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-																		<li>
-																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																				<span class="blue">
-																					<i class="icon-zoom-in bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-
-																		<li>
-																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																				<span class="green">
-																					<i class="icon-edit bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-
-																		<li>
-																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																				<span class="red">
-																					<i class="icon-trash bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-																	</ul>
-																</div>
-															</div>
+													    <td class="price">价格1</td>
+														<td>
+														 	价格2
 														</td>
 
 													</tr>
@@ -730,6 +682,7 @@
 													{
 													$("#displaytbody").append($("#displaytable").clone());
 												    }
+
 													</script>
 
 

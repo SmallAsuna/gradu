@@ -5,14 +5,11 @@ use Think\Model;
 class MachineController extends Controller {
     public function index(){
 
-    	
-
-    //  $a=0;
 
        $Equipment = M("Equipment");
        $data =$Equipment->select();
-       //dump($data);
        $length = count($data)-1;
+       //dump($data);
        $this->assign('twice',$length);
        $this->display();
 
@@ -25,7 +22,9 @@ class MachineController extends Controller {
           $(".machinename:eq(0)").replaceWith("<td>'.$data[$i]["name"].'</td>");
           $(".machineown:eq(0)").replaceWith("<td>'.$data[$i]["owner"].'</td>");
           $(".time:eq(0)").replaceWith("<td>'.$data[$i]["time"].'</td>");
+          $(".price:eq(0)").replaceWith("<td>'.$data[$i]["price"].'</td>");
           </script>';
+
           }
 
     }
@@ -43,8 +42,8 @@ class MachineController extends Controller {
         $data['serialnumber']=$_POST["number"];
         $data['name']=$_POST["name"];
         $data['status']=$_POST["status"];
-        $data['new']=$_POST["new1"];
         $data['owner']=$_POST["owner"];
+        $data['price']=$_POST["price"];
         
         $Equipment->add($data);
       
