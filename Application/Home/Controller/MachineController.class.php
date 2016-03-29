@@ -25,6 +25,8 @@ class MachineController extends Controller {
           $(".price:eq(0)").replaceWith("<td>'.$data[$i]["price"].'</td>");
           $("span.label.label-sm:eq('.$i.')").replaceWith("<span class=\"label label-sm label-success\">'.$data[$i]["status"].'</span>");
           $("form.used:eq('.$i.')").attr("action","index.php?m=home&c=machine&a=beuse&id='.$data[$i]["id"].'");
+          $("a.blue:eq('.$i.')").attr("href","/gradu/uploads/'.$data[$i]["dir"].'");
+
           </script>';
          }
 
@@ -57,7 +59,7 @@ class MachineController extends Controller {
           echo $file['savepath'].$file['savename'];
           }
 
-        dump($_POST);
+
         $Equipment=M("Equipment");
         $data['serialnumber']=$_POST["number"];
         $data['name']=$_POST["name"];
@@ -67,13 +69,14 @@ class MachineController extends Controller {
         $data['dir']=$file['savepath'].$file['savename'];
         $Equipment->add($data);
 
-        }
-
-
         echo '<script language="javascript" type="text/javascript">
            window.location.href="http://localhost/gradu/index.php?m=home&c=machine&a=insertshow"; 
            alert("上传成功");
           </script>';
+        }
+
+
+        
     
 
 
