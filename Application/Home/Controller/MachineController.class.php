@@ -42,15 +42,7 @@ class MachineController extends Controller {
 
 
     public function insert(){
-        dump($_POST);
-        $Equipment=M("Equipment");
-        $data['serialnumber']=$_POST["number"];
-        $data['name']=$_POST["name"];
-        $data['status']=$_POST["status"];
-        $data['owner']=$_POST["owner"];
-        $data['price']=$_POST["price"];
-        
-        $Equipment->add($data);
+       
       
 
     }
@@ -59,7 +51,7 @@ class MachineController extends Controller {
 
           $upload = new \Think\Upload();// 实例化上传类
           $upload->maxSize   =     3145728 ;// 设置附件上传大小
-          $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+          $upload->exts      =     array('pdf', 'gif', 'png', 'jpeg');// 设置附件上传类型
           $upload->rootPath  =      './Uploads/'; // 设置附件上传根目录
           $upload->savePath  =      ''; // 设置附件上传（子）目录
           // 上传文件
@@ -70,7 +62,20 @@ class MachineController extends Controller {
           foreach($info as $file){
           echo $file['savepath'].$file['savename'];
           }
+
+        dump($_POST);
+        $Equipment=M("Equipment");
+        $data['serialnumber']=$_POST["number"];
+        $data['name']=$_POST["name"];
+        $data['status']=$_POST["status"];
+        $data['owner']=$_POST["owner"];
+        $data['price']=$_POST["price"];
+        $data['dir']=$file['savepath'].$file['savename'];
+        $Equipment->add($data);
+
           }
+
+
   
     }
 

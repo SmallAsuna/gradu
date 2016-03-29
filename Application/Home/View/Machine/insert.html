@@ -46,6 +46,7 @@
 		.formcss{padding: 10px;
 				font-size: 15px;
 				line-height: 10px;
+
 		}
 		.radiocss{padding: 5px;}
 		.radiocss:hover{background-color:rgba(0,255,0,0.5);
@@ -672,9 +673,10 @@
 								<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 
 
-								<form action="index.php?m=home&c=machine&a=insert" method="post" id="machine1">
-									
-								<div class="formcss">
+							<form id="datasheet" action="index.php?m=home&c=machine&a=upload" enctype="multipart/form-data" method="post" >
+
+
+							<div class="formcss">
 								编　号:<input type="text" name="number" />
 								</div>
 								<div class="formcss">
@@ -710,38 +712,18 @@
 										</div>
 								
 								</div>
-														
-							</form>
 
+							数据手册文件:仅支持PDF
 							<div class="formcss">
-							<button style="height:40px;width:100px;background-color:rgba(16,175,48,0.9);border:0;color:white" onclick="symbitfrom()">添加器件</button>
+							<input type="file" name="photo" />
 							</div>
 
-								<script type="text/javascript">
+							<div class="formcss">
+							<input type="submit" value="添加器件"  onclick="symbitfrom()"
+							style="height:40px;width:100px;background-color:rgba(16,175,48,0.9);border:0px;color:white;"  />
+							</div>
 
-								function symbitfrom(){
-
-								$.post("index.php?m=home&c=machine&a=insert",{
-									number:$("[name='number']").val(),
-									name:$("[name='name']").val(),
-									status:$("[name='status']:checked").val(),
-									owner:$("[name='owner']").val(),
-									price:$("[name='price']").val()
-
-								});
-
-
-									
-								alert("插入成功");  
-								location.replace(location.href);   
-									
-								}
-
-
-
-
-								</script>
-
+							</form>
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div><!-- /.main-content -->
