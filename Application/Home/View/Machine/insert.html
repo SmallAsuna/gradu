@@ -18,7 +18,7 @@
 
 		<!-- fonts -->
 
-		<!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />-->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
 
 		<!-- ace styles -->
 
@@ -710,23 +710,12 @@
 										</div>
 								
 								</div>
-							
-
-					
- 								
-							
-								<div class="formcss">
-								<input type="button" 
-								style="height:40px;width:70px;background-color:rgba(16,175,48,0.9);border:0;color:white" 
-								value="添加器件" onclick="symbitfrom()"/>
-								</div>
-
+														
 							</form>
 
-							<form action="index.php?m=home&c=machine&a=upload" enctype="multipart/form-data" method="post" >
-								<input type="file" name="pdf" />
-								<input type="submit" value="提交" >
-								</form>
+							<div class="formcss">
+							<button style="height:40px;width:100px;background-color:rgba(16,175,48,0.9);border:0;color:white" onclick="symbitfrom()">添加器件</button>
+							</div>
 
 								<script type="text/javascript">
 
@@ -820,7 +809,7 @@
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <![endif]-->
 
 		<!--[if !IE]> -->
