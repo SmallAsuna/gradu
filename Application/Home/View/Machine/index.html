@@ -14,6 +14,11 @@
 		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
 
 		<script src="assets/js/ace-extra.min.js"></script>
+		<style type="text/css">
+		button{width: 60px;height: 20px;background-color: rgba(180,180,180,0.5);padding: 0;border: 0;margin: 0;}
+
+
+		</style>
 
 	</head>
 
@@ -667,9 +672,10 @@
 														<td class="hidden-480 status">
 															<span class="label label-sm label-success">正常</span>
 														</td>
-													    <td class="price">价格1</td>
+													    <td class="price">价格</td>
 														<td>
-														 	价格2
+														 	<button onclick="applyForUse()">使用</button>
+														 	<button onclick="edit()">编辑</button>
 														</td>
 
 													</tr>
@@ -683,7 +689,7 @@
 													$("#displaytbody").append($("#displaytable").clone());
 												    }
 												    
-
+												    function show(){alert("123456");}
 													</script>
 
 

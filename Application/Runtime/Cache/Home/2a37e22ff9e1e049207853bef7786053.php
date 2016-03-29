@@ -717,7 +717,7 @@
 							
 								<div class="formcss">
 								<input type="button" 
-								style="height:40px;width:70px;background-color:rgba(127,127,127,0.7);border:0;" 
+								style="height:40px;width:70px;background-color:rgba(16,175,48,0.9);border:0;color:white" 
 								value="添加器件" onclick="symbitfrom()"/>
 								</div>
 
