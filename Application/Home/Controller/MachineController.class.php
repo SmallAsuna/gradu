@@ -54,6 +54,14 @@ class MachineController extends Controller {
 
     }
 
+    public function beuse($id){
+
+      echo $id;
+        
+      
+
+    }
+
 
 }
 

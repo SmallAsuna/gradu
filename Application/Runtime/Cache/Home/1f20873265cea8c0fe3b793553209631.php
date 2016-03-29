@@ -8,17 +8,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-
 		<link rel="stylesheet" href="assets/css/ace.min.css" />
 		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
 		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-
 		<script src="assets/js/ace-extra.min.js"></script>
 		<style type="text/css">
-		button{width: 60px;height: 20px;background-color: rgba(180,180,180,0.5);padding: 0;border: 0;margin: 0;}
-
+		.used{display: inline-block;width: 40px;height: 10px;}
 
 		</style>
+
 
 	</head>
 
@@ -674,8 +672,22 @@
 														</td>
 													    <td class="price">价格</td>
 														<td>
-														 	<button onclick="applyForUse()">使用</button>
-														 	<button onclick="edit()">编辑</button>
+														   <form class="used" action="index.php?m=home&c=machine&a=beuse&id=000" method="post">
+														 	<button class="btn btn-xs btn-success" type="submit" title="申请使用">
+																<i class="icon-ok bigger-120"></i>
+														    </button>
+														   </form>
+														   <a class="blue" href="#" title="查看手册" style="padding-right: 10px;">
+														    <i class="icon-zoom-in bigger-130"></i>
+														   </a>
+
+														   <a class="green" href="#" title="编辑设备" style="padding-right: 10px;">
+																<i class="icon-pencil bigger-130"></i>
+															</a>
+
+															<a class="red" href="#" title="删除设备"style="padding-right: 10px;">
+																<i class="icon-trash bigger-130"></i>
+															</a>
 														</td>
 
 													</tr>
