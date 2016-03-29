@@ -14,7 +14,6 @@
 		<script src="assets/js/ace-extra.min.js"></script>
 		<style type="text/css">
 		.used{display: inline-block;width: 40px;height: 10px;}
-		#bottom{display: inline-block;}
 
 		</style>
 
@@ -678,7 +677,6 @@
 																<i class="icon-ok bigger-120"></i>
 														    </button>
 														   </form>
-														   <div id="bottom">
 														   <a class="blue" href="#" title="查看手册" style="padding-right: 10px;">
 														    <i class="icon-zoom-in bigger-130"></i>
 														   </a>
@@ -690,7 +688,6 @@
 															<a class="red" href="#" title="删除设备"style="padding-right: 10px;">
 																<i class="icon-trash bigger-130"></i>
 															</a>
-															</div>
 														</td>
 
 													</tr>
@@ -703,7 +700,7 @@
 													{
 													$("#displaytbody").append($("#displaytable").clone());
 												    }
-												    
+												    $("form.used").attr('action','index.php?m=home&c=machine&a=beuse&id=123456');
 										
 													</script>
 

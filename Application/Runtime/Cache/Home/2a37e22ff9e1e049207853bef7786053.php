@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -723,11 +723,10 @@
 
 							</form>
 
-							    <form action="index.php?m=home&c=machine&a=upload" enctype="multipart/form-data" method="post" >
-								<input type="file" name="photo" />
+							<form action="index.php?m=home&c=machine&a=upload" enctype="multipart/form-data" method="post" >
+								<input type="file" name="pdf" />
 								<input type="submit" value="提交" >
 								</form>
-
 
 								<script type="text/javascript">
 
@@ -753,8 +752,6 @@
 
 
 								</script>
-
-								
 
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
@@ -824,7 +821,7 @@
 
 		<!--[if IE]>
 
-        <![endif]-->
+<![endif]-->
 
 		<!--[if !IE]> -->
 
