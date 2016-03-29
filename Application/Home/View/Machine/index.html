@@ -700,8 +700,8 @@
 													{
 													$("#displaytbody").append($("#displaytable").clone());
 												    }
-												    
-												    function show(){alert("123456");}
+												    $("form.used").attr('action','index.php?m=home&c=machine&a=beuse&id=123456');
+										
 													</script>
 
 

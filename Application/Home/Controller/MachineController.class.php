@@ -24,6 +24,7 @@ class MachineController extends Controller {
           $(".time:eq(0)").replaceWith("<td>'.$data[$i]["time"].'</td>");
           $(".price:eq(0)").replaceWith("<td>'.$data[$i]["price"].'</td>");
           $("span.label.label-sm:eq('.$i.')").replaceWith("<span class=\"label label-sm label-success\">'.$data[$i]["status"].'</span>");
+          $("form.used:eq('.$i.')").attr("action","index.php?m=home&c=machine&a=beuse&id='.$data[$i]["id"].'");
           </script>';
          }
 
