@@ -46,7 +46,7 @@ class MachineController extends Controller {
     public function upload(){
 
           $upload = new \Think\Upload();// 实例化上传类
-          $upload->maxSize   =     3145728 ;// 设置附件上传大小
+          $upload->maxSize   =     1003145728 ;// 设置附件上传大小
           //$upload->exts      =     array('pdf', 'gif', 'jpg', 'jpeg');// 设置附件上传类型
           $upload->rootPath  =      './Uploads/'; // 设置附件上传根目录
           $upload->savePath  =      ''; // 设置附件上传（子）目录
@@ -70,7 +70,7 @@ class MachineController extends Controller {
         $Equipment->add($data);
 
         echo '<script language="javascript" type="text/javascript">
-           window.location.href="http://localhost/gradu/index.php?m=home&c=machine&a=insertshow"; 
+           window.location.href="index.php?m=home&c=machine&a=insertshow"; 
            alert("上传成功");
           </script>';
         }
@@ -81,6 +81,13 @@ class MachineController extends Controller {
 
 
   
+    }
+
+
+    public function search($value)
+    {
+      
+      echo $value;
     }
 
     public function beuse($id){

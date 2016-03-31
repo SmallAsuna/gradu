@@ -604,9 +604,9 @@
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
-							<form class="form-search">
+							<form class="form-search" action="index.php?m=home&c=machine&a=search" method="post">
 								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<input type="text" name="value" placeholder="搜索设备" class="nav-search-input" id="nav-search-input" autocomplete="off"  />
 									<i class="icon-search nav-search-icon"></i>
 								</span>
 							</form>
