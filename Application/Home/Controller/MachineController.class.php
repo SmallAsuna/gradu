@@ -5,7 +5,6 @@ use Think\Model;
 class MachineController extends Controller {
     public function index(){
 
-
        $Equipment = M("Equipment");
        $data =$Equipment->select();
        $length = count($data)-1;
@@ -32,7 +31,6 @@ class MachineController extends Controller {
 
          $this->display("repleace");
          
-
     }
 
      public function insertshow(){
@@ -58,44 +56,62 @@ class MachineController extends Controller {
           foreach($info as $file){
           echo $file['savepath'].$file['savename'];
           }
+          $Equipment=M("Equipment");
+          $data['serialnumber']=$_POST["number"];
+          $data['name']=$_POST["name"];
+          $data['status']=$_POST["status"];
+          $data['owner']=$_POST["owner"];
+          $data['price']=$_POST["price"];
+          $data['dir']=$file['savepath'].$file['savename'];
+          $Equipment->add($data);
 
-
-        $Equipment=M("Equipment");
-        $data['serialnumber']=$_POST["number"];
-        $data['name']=$_POST["name"];
-        $data['status']=$_POST["status"];
-        $data['owner']=$_POST["owner"];
-        $data['price']=$_POST["price"];
-        $data['dir']=$file['savepath'].$file['savename'];
-        $Equipment->add($data);
-
-        echo '<script language="javascript" type="text/javascript">
-           window.location.href="index.php?m=home&c=machine&a=insertshow"; 
-           alert("上传成功");
-          </script>';
-        }
-
-
-        
-    
+          echo '<script language="javascript" type="text/javascript">
+             window.location.href="index.php?m=home&c=machine&a=insertshow"; 
+             alert("上传成功");
+            </script>';
+          }
 
 
   
     }
 
 
-    public function search($value)
-    {
-      
-      echo $value;
+    public function search($value){
+       $Equipment = M("Equipment");
+       //$condition['serialnumber'] = array('like',$value.'%');
+       $condition['name'] = array('like','%'.$value.'%');
+       $data =$Equipment->where($condition)->select();
+       
+       $length = count($data)-1;
+       $this->assign('twice',$length);
+       $this->display();
+
+
+        for($i=0;$i<count($data);$i++)
+        {
+
+        echo '<script type="text/javascript">
+          $(".machineid:eq(0)").replaceWith("<td>'.$data[$i]["serialnumber"].'</td>");
+          $(".machinename:eq(0)").replaceWith("<td>'.$data[$i]["name"].'</td>");
+          $(".machineown:eq(0)").replaceWith("<td>'.$data[$i]["owner"].'</td>");
+          $(".time:eq(0)").replaceWith("<td>'.$data[$i]["time"].'</td>");
+          $(".price:eq(0)").replaceWith("<td>'.$data[$i]["price"].'</td>");
+          $("span.label.label-sm:eq('.$i.')").replaceWith("<span class=\"label label-sm label-success\">'.$data[$i]["status"].'</span>");
+          $("form.used:eq('.$i.')").attr("action","index.php?m=home&c=machine&a=beuse&id='.$data[$i]["id"].'");
+          $("a.blue:eq('.$i.')").attr("href","/gradu/uploads/'.$data[$i]["dir"].'");
+
+          </script>';
+         }
+
+         $this->display("repleace");
+         if(!$data){echo '<script type="text/javascript">alert("没找到任何设备");</script>';}
+
+
     }
 
+
     public function beuse($id){
-
       echo $id;
-        
-      
-
     }
 
 
