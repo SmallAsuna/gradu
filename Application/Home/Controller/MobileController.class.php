@@ -84,7 +84,10 @@ class MobileController extends Controller {
          }
 
          $this->display("repleace");
-         if(!$data){echo '<script type="text/javascript">alert("没找到任何设备");</script>';}
+         if(!$data){
+          echo '<script type="text/javascript">alert("此设备还没有录入系统");</script>';
+          echo '<script>window.location.href="index.php?m=home&c=machine&a=insertvalue&value='.$value.'";</script>';
+       }
 
 
     }

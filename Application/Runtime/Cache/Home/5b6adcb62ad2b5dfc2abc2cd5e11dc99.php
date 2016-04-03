@@ -48,15 +48,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="用户名" name="usern" value="text"/>
+															<input type="text" class="form-control" placeholder="用户名" name="usern" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" value="123456"
-															name="passw"/>
+															<input type="password" class="form-control" placeholder="密码" name="passw"/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>

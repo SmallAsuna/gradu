@@ -38,6 +38,13 @@ class MachineController extends Controller {
         $this->display("insert");
         
     }
+     public function insertvalue($value){
+
+        $this->display("insert");
+        echo '<script type="text/javascript">$("#bianhao").attr("value",'.$value.');</script>';
+        
+    }
+
 
 
 

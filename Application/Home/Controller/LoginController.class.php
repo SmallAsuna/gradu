@@ -48,7 +48,8 @@ class LoginController extends Controller {
           $data['email'] = $_POST["Email"];
           $data['type'] = "student";
           $User->add($data);
-          echo "注册成功";
+          echo "<script>alert('注册成功')</script>";
+          echo '<script>window.location.href="index.php?"</script>';
         }
 
        }
