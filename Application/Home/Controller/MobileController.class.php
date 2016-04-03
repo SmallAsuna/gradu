@@ -59,4 +59,34 @@ class MobileController extends Controller {
 
      }
 
+
+
+     public function search($value){
+       $Equipment = M("Equipment");
+       $condition['serialnumber'] = array('like',$value.'%');
+       $data =$Equipment->where($condition)->select();
+       
+       $length = count($data)-1;
+       $this->assign('twice',$length);
+       $this->display("231search");
+
+
+        for($i=0;$i<count($data);$i++)
+        {
+
+        echo '<script type="text/javascript">
+          $(".machinename:eq(0)").replaceWith("<td>'.$data[$i]["name"].'</td>");
+          $("span.label.label-sm:eq('.$i.')").replaceWith("<span class=\"label label-sm label-success\">'.$data[$i]["status"].'</span>");
+          $("a.blue1:eq('.$i.')").attr("href","index.php?m=home&c=machine&a=beuse&id='.$data[$i]["id"].'");
+          $("a.blue2:eq('.$i.')").attr("href","/gradu/uploads/'.$data[$i]["dir"].'");
+
+          </script>';
+         }
+
+         $this->display("repleace");
+         if(!$data){echo '<script type="text/javascript">alert("没找到任何设备");</script>';}
+
+
+    }
+
 }
