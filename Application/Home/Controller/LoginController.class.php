@@ -16,12 +16,10 @@ class LoginController extends Controller {
     	$where['password']=$_POST["passw"];
     	$data = $User->field('username')->where($where)->find();
     	if($data){
-    			//dump($data);
+
     			$_SESSION['username']=$_POST["usern"];
-    			//echo $_SESSION["username"];
-    			//unset($_SESSION['username']);
-    			echo $_SESSION["username"];
-                header('location:index.php?');
+
+            echo '<script>window.location.href="index.php?"</script>';
     	}
     	else{
           echo "用户名或者密码错误";

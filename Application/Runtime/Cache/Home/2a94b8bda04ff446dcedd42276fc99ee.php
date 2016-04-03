@@ -375,9 +375,9 @@
 								</li>
 
 								<li>
-									<a href="nestable-list.html">
+									<a href="index.php?m=home&c=mobile">
 										<i class="icon-double-angle-right"></i>
-										可拖拽列表
+										手机版
 									</a>
 								</li>
 

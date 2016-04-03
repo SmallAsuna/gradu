@@ -79,7 +79,7 @@ class MachineController extends Controller {
     public function search($value){
        $Equipment = M("Equipment");
        //$condition['serialnumber'] = array('like',$value.'%');
-       $condition['name'] = array('like','%'.$value.'%');
+        $condition['name'] = array('like','%'.$value.'%');
        $data =$Equipment->where($condition)->select();
        
        $length = count($data)-1;
